@@ -1,0 +1,49 @@
+[
+  {
+    "id": "plan_free",
+    "name": "Free",
+    "price": 0,
+    "period": "forever",
+    "features": [
+      "1 active price watch",
+      "Daily price checks",
+      "Email alerts only",
+      "Basic route insights"
+    ],
+    "savings_avg": 0,
+    "highlight": false
+  },
+  {
+    "id": "plan_pro",
+    "name": "Pro",
+    "price": 9.99,
+    "period": "month",
+    "features": [
+      "5 active price watches",
+      "Hourly price checks",
+      "Push + email alerts",
+      "48-hour price holds",
+      "Savings dashboard",
+      "Route insights + trends"
+    ],
+    "savings_avg": 127,
+    "highlight": true
+  },
+  {
+    "id": "plan_premium",
+    "name": "Premium",
+    "price": 19.99,
+    "period": "month",
+    "features": [
+      "Unlimited price watches",
+      "Real-time price checks",
+      "Instant push alerts",
+      "72-hour price holds",
+      "Priority booking",
+      "AI route optimization",
+      "Concierge support"
+    ],
+    "savings_avg": 243,
+    "highlight": false
+  }
+]

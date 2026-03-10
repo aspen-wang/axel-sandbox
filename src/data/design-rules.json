@@ -1,0 +1,99 @@
+{
+  "colorRules": [
+    {
+      "id": "pink",
+      "name": "Pink",
+      "hex": "#EF508D",
+      "usage": "Axel avatar, label, thinking dots, searching animation, monitoring status — only when user perceives Axel is doing something",
+      "never": "Buttons, inputs, CTAs, interactive elements the user taps"
+    },
+    {
+      "id": "blue",
+      "name": "Blue",
+      "hex": "#0090FF",
+      "usage": "All interactive UI user touches: buttons, option pills, CTAs, dropdowns, modals, pickers, toggles",
+      "never": "Axel status indicators, avatars, labels"
+    },
+    {
+      "id": "green",
+      "name": "Green",
+      "hex": "#4FC660",
+      "usage": "Prices, savings, Save $X, confirmed status, Nonstop, success states",
+      "never": "Interactive buttons, Axel branding"
+    },
+    {
+      "id": "orange",
+      "name": "Orange",
+      "hex": "#FB7A29",
+      "usage": "Price change alerts, Non-refundable, stops count, time-limited warnings",
+      "never": "Success states, interactive buttons, Axel branding"
+    }
+  ],
+  "surfaces": {
+    "bg": "#000000",
+    "card": "#111111",
+    "border": "#222222",
+    "elevated": "#1A1A1A"
+  },
+  "textColors": {
+    "primary": "#FFFFFF",
+    "secondary": "#AAAAAA",
+    "tertiary": "#666666",
+    "strikethrough": "#888888"
+  },
+  "typography": {
+    "fontFamily": "Lato",
+    "weights": "400 regular, 600 semi-bold (titles/prices only), never 700 bold",
+    "scales": [
+      { "name": "Screen title", "size": "20px", "weight": "600", "color": "#FFFFFF" },
+      { "name": "Card title", "size": "16px", "weight": "600", "color": "#FFFFFF" },
+      { "name": "Body", "size": "14px", "weight": "400", "color": "#FFFFFF" },
+      { "name": "Secondary", "size": "13px", "weight": "400", "color": "#AAAAAA" },
+      { "name": "Caption", "size": "12px", "weight": "400", "color": "#666666" }
+    ]
+  },
+  "components": {
+    "ctaButton": {
+      "label": "CTA Button",
+      "bgColor": "#0090FF",
+      "textColor": "#FFFFFF",
+      "borderRadius": "30px",
+      "fontSize": "14px",
+      "fontWeight": "600",
+      "paddingY": "14px",
+      "paddingX": "8px"
+    },
+    "optionButton": {
+      "label": "Option Button",
+      "bgColor": "transparent",
+      "borderColor": "rgba(0,144,255,0.4)",
+      "textColor": "#0090FF",
+      "borderRadius": "30px",
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "paddingY": "8px",
+      "paddingX": "14px"
+    },
+    "card": {
+      "label": "Card",
+      "bgColor": "#111111",
+      "borderColor": "#222222",
+      "borderRadius": "8px",
+      "padding": "16px 16px 12px 16px"
+    },
+    "axelPanel": {
+      "label": "Axel Panel",
+      "bgColor": "#1A1A1A",
+      "borderTopColor": "#222222",
+      "accentColor": "#EF508D",
+      "accentWidth": "3px",
+      "avatarSize": "24px"
+    }
+  },
+  "animations": {
+    "slideTransition": "300ms ease",
+    "fadeIn": "200ms ease-in",
+    "staggerDelay": "60ms",
+    "thinkingPulse": "0.9s ease-in-out infinite"
+  }
+}

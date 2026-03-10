@@ -1,0 +1,845 @@
+{
+  "component:trip-card": {
+    "versions": [
+      {
+        "label": "A",
+        "isMain": true,
+        "createdAt": "2026-03-05T00:00:00Z",
+        "notes": "City image card with date row and type badge"
+      },
+      {
+        "label": "D",
+        "isMain": false,
+        "createdAt": "2026-03-04T00:00:00Z",
+        "notes": "Boarding pass"
+      },
+      {
+        "label": "I",
+        "isMain": false,
+        "createdAt": "2026-03-04T00:00:00Z",
+        "notes": "Polaroid style"
+      },
+      {
+        "label": "J",
+        "isMain": false,
+        "createdAt": "2026-03-04T00:00:00Z",
+        "notes": "Calendar card"
+      },
+      {
+        "label": "K",
+        "isMain": false,
+        "createdAt": "2026-03-04T00:00:00Z",
+        "notes": "Kanban ticket"
+      }
+    ]
+  },
+  "screen:importing": {
+    "versions": [
+      {
+        "label": "A",
+        "isMain": true,
+        "createdAt": "2026-02-27T00:00:00Z",
+        "notes": ""
+      }
+    ]
+  },
+  "screen:flight-deals": {
+    "versions": [
+      {
+        "label": "A",
+        "isMain": true,
+        "createdAt": "2026-02-27T00:00:00Z",
+        "notes": ""
+      }
+    ]
+  },
+  "component:flight-card": {
+    "versions": [
+      {
+        "label": "A",
+        "isMain": true,
+        "createdAt": "2026-03-02T21:54:35.386Z",
+        "notes": ""
+      }
+    ]
+  },
+  "component:price-chart": {
+    "versions": [
+      {
+        "label": "A",
+        "isMain": true,
+        "createdAt": "2026-02-27T00:00:00Z",
+        "notes": ""
+      }
+    ]
+  },
+  "component:cta-button": {
+    "versions": [
+      {
+        "label": "A",
+        "isMain": true,
+        "createdAt": "2026-02-27T00:00:00Z",
+        "notes": ""
+      }
+    ]
+  },
+  "component:flight-deal-card": {
+    "versions": [
+      {
+        "label": "A",
+        "isMain": true,
+        "createdAt": "2026-03-02T02:00:00Z",
+        "notes": "Clean & Balanced"
+      },
+      {
+        "label": "B",
+        "isMain": false,
+        "createdAt": "2026-03-02T02:10:00Z",
+        "notes": "Price-Forward"
+      },
+      {
+        "label": "C",
+        "isMain": false,
+        "createdAt": "2026-03-02T02:20:00Z",
+        "notes": "Visual Journey"
+      },
+      {
+        "label": "D",
+        "isMain": false,
+        "createdAt": "2026-03-02T08:00:00Z",
+        "notes": "Stacked Legs"
+      },
+      {
+        "label": "E",
+        "isMain": false,
+        "createdAt": "2026-03-02T08:10:00Z",
+        "notes": "Side by Side"
+      },
+      {
+        "label": "F",
+        "isMain": false,
+        "createdAt": "2026-03-02T08:20:00Z",
+        "notes": "Boarding Pass"
+      },
+      {
+        "label": "G",
+        "isMain": false,
+        "createdAt": "2026-03-02T08:30:00Z",
+        "notes": "Continuous Timeline"
+      },
+      {
+        "label": "H",
+        "isMain": false,
+        "createdAt": "2026-03-02T08:40:00Z",
+        "notes": "Route Header + Rows"
+      }
+    ]
+  },
+  "component:flight-results-list": {
+    "versions": [
+      {
+        "label": "A",
+        "isMain": true,
+        "createdAt": "2026-03-02T00:00:00Z",
+        "notes": "Clean stack"
+      },
+      {
+        "label": "B",
+        "isMain": false,
+        "createdAt": "2026-03-02T00:10:00Z",
+        "notes": "Spaced cards + best deal badge"
+      },
+      {
+        "label": "C",
+        "isMain": false,
+        "createdAt": "2026-03-02T00:20:00Z",
+        "notes": "Condensed with summary stats"
+      }
+    ]
+  },
+  "component:hotel-deal-card": {
+    "versions": [
+      {
+        "label": "A",
+        "isMain": false,
+        "createdAt": "2026-03-02T02:00:00Z",
+        "notes": "Image Hero"
+      },
+      {
+        "label": "B",
+        "isMain": false,
+        "createdAt": "2026-03-02T02:10:00Z",
+        "notes": "Data Dense"
+      },
+      {
+        "label": "C",
+        "isMain": false,
+        "createdAt": "2026-03-02T02:20:00Z",
+        "notes": "Premium"
+      },
+      {
+        "label": "D",
+        "isMain": false,
+        "createdAt": "2026-03-04T16:00:00Z",
+        "notes": "Magazine Cover",
+        "sourceVersion": "C"
+      },
+      {
+        "label": "E",
+        "isMain": false,
+        "createdAt": "2026-03-04T16:10:00Z",
+        "notes": "Split Overlay",
+        "sourceVersion": "C"
+      },
+      {
+        "label": "F",
+        "isMain": true,
+        "createdAt": "2026-03-04T16:20:00Z",
+        "notes": "Cinematic Card",
+        "sourceVersion": "C"
+      },
+      {
+        "label": "G",
+        "isMain": false,
+        "createdAt": "2026-03-04T16:30:00Z",
+        "notes": "Cinematic Compact",
+        "sourceVersion": "F"
+      },
+      {
+        "label": "H",
+        "isMain": false,
+        "createdAt": "2026-03-04T16:40:00Z",
+        "notes": "Cinematic Two-Strip",
+        "sourceVersion": "F"
+      },
+      {
+        "label": "I",
+        "isMain": false,
+        "createdAt": "2026-03-04T16:50:00Z",
+        "notes": "Cinematic Grid",
+        "sourceVersion": "F"
+      }
+    ]
+  },
+  "component:watch-card": {
+    "versions": [
+      {
+        "label": "A",
+        "isMain": true,
+        "createdAt": "2026-03-02T06:00:00Z",
+        "notes": "Refined"
+      },
+      {
+        "label": "B",
+        "isMain": false,
+        "createdAt": "2026-03-02T06:10:00Z",
+        "notes": "Compact"
+      },
+      {
+        "label": "C",
+        "isMain": false,
+        "createdAt": "2026-03-02T06:20:00Z",
+        "notes": "Data Rich"
+      },
+      {
+        "label": "D",
+        "isMain": false,
+        "createdAt": "2026-03-02T07:00:00Z",
+        "notes": "Gradient Accent"
+      },
+      {
+        "label": "E",
+        "isMain": false,
+        "createdAt": "2026-03-02T07:10:00Z",
+        "notes": "Progress Bar"
+      },
+      {
+        "label": "F",
+        "isMain": false,
+        "createdAt": "2026-03-02T07:20:00Z",
+        "notes": "Boarding Pass"
+      },
+      {
+        "label": "G",
+        "isMain": false,
+        "createdAt": "2026-03-02T07:30:00Z",
+        "notes": "Alert Focus"
+      },
+      {
+        "label": "H",
+        "isMain": false,
+        "createdAt": "2026-03-02T07:40:00Z",
+        "notes": "Metric Grid"
+      },
+      {
+        "label": "F1",
+        "isMain": false,
+        "createdAt": "2026-03-02T09:00:00Z",
+        "notes": "Boarding Pass + Stops"
+      },
+      {
+        "label": "F2",
+        "isMain": false,
+        "createdAt": "2026-03-02T09:10:00Z",
+        "notes": "Boarding Pass + Axel Savings"
+      },
+      {
+        "label": "F3",
+        "isMain": false,
+        "createdAt": "2026-03-02T09:20:00Z",
+        "notes": "Boarding Pass + Stops + Savings"
+      },
+      {
+        "label": "I",
+        "isMain": false,
+        "createdAt": "2026-03-02T10:00:00Z",
+        "notes": "Route Hero"
+      },
+      {
+        "label": "J",
+        "isMain": false,
+        "createdAt": "2026-03-02T10:10:00Z",
+        "notes": "Price Hero"
+      },
+      {
+        "label": "K",
+        "isMain": false,
+        "createdAt": "2026-03-02T10:20:00Z",
+        "notes": "Card Stack"
+      },
+      {
+        "label": "L",
+        "isMain": false,
+        "createdAt": "2026-03-02T10:30:00Z",
+        "notes": "Left Accent"
+      },
+      {
+        "label": "M",
+        "isMain": false,
+        "createdAt": "2026-03-02T10:40:00Z",
+        "notes": "Centered"
+      },
+      {
+        "label": "F3-A",
+        "isMain": false,
+        "createdAt": "2026-03-03T04:00:00Z",
+        "notes": "WatchCard v2 — F3 Series: Watching · Nonstop · Cleanest"
+      },
+      {
+        "label": "F3-B",
+        "isMain": false,
+        "createdAt": "2026-03-03T04:10:00Z",
+        "notes": "WatchCard v2 — F3 Series: Watching · 1 Stop · Timeline"
+      },
+      {
+        "label": "F3-C",
+        "isMain": false,
+        "createdAt": "2026-03-03T04:20:00Z",
+        "notes": "WatchCard v2 — F3 Series: Price Dropping · 1 Stop"
+      },
+      {
+        "label": "F3-D",
+        "isMain": false,
+        "createdAt": "2026-03-03T04:30:00Z",
+        "notes": "WatchCard v2 — F3 Series: Deal Found · Nonstop · CTA"
+      },
+      {
+        "label": "F3-E",
+        "isMain": false,
+        "createdAt": "2026-03-03T04:40:00Z",
+        "notes": "WatchCard v2 — F3 Series: Deal Found · 1 Stop · CTA"
+      },
+      {
+        "label": "P1",
+        "isMain": false,
+        "createdAt": "2026-03-03T06:00:00Z",
+        "notes": "Price Series: Minimal — large white price, strikethrough right, green savings pill"
+      },
+      {
+        "label": "P2",
+        "isMain": false,
+        "createdAt": "2026-03-03T06:10:00Z",
+        "notes": "Price Series: Stacked — market strikethrough top, Axel bold below, savings pill right"
+      },
+      {
+        "label": "P3",
+        "isMain": false,
+        "createdAt": "2026-03-03T06:20:00Z",
+        "notes": "Price Series: Elevated card — price in #2A2A2A container, full-width savings badge"
+      },
+      {
+        "label": "P4",
+        "isMain": false,
+        "createdAt": "2026-03-03T06:30:00Z",
+        "notes": "Price Series: Savings-first — green savings hero, prices below smaller"
+      },
+      {
+        "label": "P5",
+        "isMain": false,
+        "createdAt": "2026-03-03T06:40:00Z",
+        "notes": "Price Series: With CTA — price left, outlined View Deal button right, savings pill above"
+      },
+      {
+        "label": "P6",
+        "isMain": false,
+        "createdAt": "2026-03-03T06:50:00Z",
+        "notes": "Price Series: Inline — one compact row: $372 ↓ $48 less · $420"
+      },
+      {
+        "label": "R1",
+        "isMain": false,
+        "createdAt": "2026-03-03T07:00:00Z",
+        "notes": "Route Series: Compact tear line — origin→dest only, 2 stops via DEN SFO in subtitle"
+      },
+      {
+        "label": "R2",
+        "isMain": false,
+        "createdAt": "2026-03-03T07:10:00Z",
+        "notes": "Route Series: No tear line — thin divider, stops inline, via city names below"
+      },
+      {
+        "label": "R3",
+        "isMain": false,
+        "createdAt": "2026-03-03T07:20:00Z",
+        "notes": "Route Series: Table rows — ultra compact single-line legs, no subtitles"
+      },
+      {
+        "label": "R2-A",
+        "isMain": false,
+        "createdAt": "2026-03-03T07:30:00Z",
+        "notes": "R2 + Savings-first price — green savings hero, prices below"
+      },
+      {
+        "label": "R2-B",
+        "isMain": false,
+        "createdAt": "2026-03-03T07:40:00Z",
+        "notes": "R2 + Inline price — $372 ↓ $48 less · $420, most compact"
+      },
+      {
+        "label": "R2-C",
+        "isMain": false,
+        "createdAt": "2026-03-03T07:50:00Z",
+        "notes": "R2 + Outlined CTA — savings pill, price left, View Deal button right"
+      }
+    ]
+  },
+  "screen:trip-flow-interactive": {
+    "versions": [
+      {
+        "label": "A",
+        "isMain": true,
+        "createdAt": "2026-03-04T00:00:00Z",
+        "notes": ""
+      },
+      {
+        "label": "B",
+        "isMain": false,
+        "createdAt": "2026-03-04T00:00:01Z",
+        "notes": "Redesigned: AxelPanel, StepProgress, BottomSheet, search animations, confetti",
+        "sourceVersion": "A"
+      },
+      {
+        "label": "C",
+        "isMain": false,
+        "createdAt": "2026-03-04T12:00:00Z",
+        "notes": "Major redesign: travel plan drafts, guided wizard, glass panel, price animations, strict color rules, search viz, confetti burst",
+        "sourceVersion": "B"
+      }
+    ]
+  },
+  "component:axel-panel": {
+    "versions": [
+      {
+        "label": "A",
+        "isMain": true,
+        "createdAt": "2026-03-04T00:00:00Z",
+        "notes": "Bottom sheet with actions"
+      },
+      {
+        "label": "B",
+        "isMain": false,
+        "createdAt": "2026-03-04T00:00:00Z",
+        "notes": "Floating bubble"
+      },
+      {
+        "label": "C",
+        "isMain": false,
+        "createdAt": "2026-03-04T00:00:00Z",
+        "notes": "Full chat thread"
+      },
+      {
+        "label": "D",
+        "isMain": false,
+        "createdAt": "2026-03-04T00:00:00Z",
+        "notes": "Minimal toast"
+      },
+      {
+        "label": "E",
+        "isMain": false,
+        "createdAt": "2026-03-04T00:00:00Z",
+        "notes": "Card stack"
+      },
+      {
+        "label": "F",
+        "isMain": false,
+        "createdAt": "2026-03-04T00:00:00Z",
+        "notes": "Side drawer"
+      }
+    ]
+  },
+  "component:step-progress": {
+    "versions": [
+      {
+        "label": "A",
+        "isMain": true,
+        "createdAt": "2026-03-04T00:00:00Z",
+        "notes": ""
+      }
+    ]
+  },
+  "component:thinking-bubble": {
+    "versions": [
+      {
+        "label": "A",
+        "isMain": false,
+        "createdAt": "2026-03-03T12:00:00Z",
+        "notes": "Bouncing Dots"
+      },
+      {
+        "label": "B",
+        "isMain": false,
+        "createdAt": "2026-03-03T12:10:00Z",
+        "notes": "Wave Pulse"
+      },
+      {
+        "label": "C",
+        "isMain": false,
+        "createdAt": "2026-03-03T12:20:00Z",
+        "notes": "Gradient Stream"
+      },
+      {
+        "label": "E",
+        "isMain": false,
+        "createdAt": "2026-03-03T12:40:00Z",
+        "notes": "Typing Reveal"
+      },
+      {
+        "label": "F",
+        "isMain": false,
+        "createdAt": "2026-03-03T13:00:00Z",
+        "notes": "Pulse Ring"
+      },
+      {
+        "label": "G",
+        "isMain": false,
+        "createdAt": "2026-03-03T13:10:00Z",
+        "notes": "Bar Equalizer"
+      },
+      {
+        "label": "H",
+        "isMain": false,
+        "createdAt": "2026-03-03T13:20:00Z",
+        "notes": "Morphing Dots"
+      },
+      {
+        "label": "K",
+        "isMain": true,
+        "createdAt": "2026-03-03T14:00:00Z",
+        "notes": "Neon Pulse"
+      },
+      {
+        "label": "L",
+        "isMain": false,
+        "createdAt": "2026-03-03T14:10:00Z",
+        "notes": "Wave Stream"
+      },
+      {
+        "label": "M",
+        "isMain": false,
+        "createdAt": "2026-03-03T14:20:00Z",
+        "notes": "Particle Field"
+      },
+      {
+        "label": "N",
+        "isMain": false,
+        "createdAt": "2026-03-03T14:30:00Z",
+        "notes": "Aurora Glow"
+      },
+      {
+        "label": "O",
+        "isMain": false,
+        "createdAt": "2026-03-03T14:40:00Z",
+        "notes": "Cascade Bars"
+      }
+    ]
+  },
+  "component:confirmed-flight-card": {
+    "versions": [
+      {
+        "label": "A",
+        "isMain": true,
+        "createdAt": "2026-03-04T12:00:00Z",
+        "notes": "Clean Card"
+      },
+      {
+        "label": "B",
+        "isMain": false,
+        "createdAt": "2026-03-04T12:10:00Z",
+        "notes": "Boarding Pass",
+        "sourceVersion": "A"
+      },
+      {
+        "label": "C",
+        "isMain": false,
+        "createdAt": "2026-03-04T12:20:00Z",
+        "notes": "Timeline",
+        "sourceVersion": "A"
+      }
+    ]
+  },
+  "component:confirmed-booking-card": {
+    "versions": [
+      {
+        "label": "A",
+        "isMain": true,
+        "createdAt": "2026-03-04T12:00:00Z",
+        "notes": "Simple Checkmark"
+      },
+      {
+        "label": "B",
+        "isMain": false,
+        "createdAt": "2026-03-04T12:10:00Z",
+        "notes": "Status + Details",
+        "sourceVersion": "A"
+      },
+      {
+        "label": "C",
+        "isMain": false,
+        "createdAt": "2026-03-04T12:20:00Z",
+        "notes": "Type Icon",
+        "sourceVersion": "A"
+      }
+    ]
+  },
+  "component:price-breakdown-card": {
+    "versions": [
+      {
+        "label": "A",
+        "isMain": true,
+        "createdAt": "2026-03-04T12:00:00Z",
+        "notes": "Line Items"
+      },
+      {
+        "label": "B",
+        "isMain": false,
+        "createdAt": "2026-03-04T12:10:00Z",
+        "notes": "Visual Bars",
+        "sourceVersion": "A"
+      },
+      {
+        "label": "C",
+        "isMain": false,
+        "createdAt": "2026-03-04T12:20:00Z",
+        "notes": "Comparison",
+        "sourceVersion": "A"
+      }
+    ]
+  },
+  "component:order-summary-card": {
+    "versions": [
+      {
+        "label": "A",
+        "isMain": true,
+        "createdAt": "2026-03-04T12:00:00Z",
+        "notes": "Icon List"
+      },
+      {
+        "label": "B",
+        "isMain": false,
+        "createdAt": "2026-03-04T12:10:00Z",
+        "notes": "Two Column",
+        "sourceVersion": "A"
+      },
+      {
+        "label": "C",
+        "isMain": false,
+        "createdAt": "2026-03-04T12:20:00Z",
+        "notes": "Compact Badge",
+        "sourceVersion": "A"
+      },
+      {
+        "label": "D",
+        "isMain": false,
+        "createdAt": "2026-03-04T21:57:00Z",
+        "notes": "Left Accent",
+        "sourceVersion": "A"
+      },
+      {
+        "label": "E",
+        "isMain": false,
+        "createdAt": "2026-03-04T21:57:10Z",
+        "notes": "Header Strip",
+        "sourceVersion": "A"
+      },
+      {
+        "label": "F",
+        "isMain": false,
+        "createdAt": "2026-03-04T21:57:20Z",
+        "notes": "Pill Tags",
+        "sourceVersion": "A"
+      }
+    ]
+  },
+  "component:saved-payment-card": {
+    "versions": [
+      {
+        "label": "A",
+        "isMain": true,
+        "createdAt": "2026-03-04T12:00:00Z",
+        "notes": "Card Row"
+      },
+      {
+        "label": "B",
+        "isMain": false,
+        "createdAt": "2026-03-04T12:10:00Z",
+        "notes": "Branded Icon",
+        "sourceVersion": "A"
+      },
+      {
+        "label": "C",
+        "isMain": false,
+        "createdAt": "2026-03-04T12:20:00Z",
+        "notes": "Minimal Chip",
+        "sourceVersion": "A"
+      }
+    ]
+  },
+  "component:hotel-map-peek-card": {
+    "versions": [
+      {
+        "label": "A",
+        "isMain": true,
+        "createdAt": "2026-03-04T12:00:00Z",
+        "notes": "Bottom Sheet"
+      },
+      {
+        "label": "B",
+        "isMain": false,
+        "createdAt": "2026-03-04T12:10:00Z",
+        "notes": "Expanded Info",
+        "sourceVersion": "A"
+      },
+      {
+        "label": "C",
+        "isMain": false,
+        "createdAt": "2026-03-04T12:20:00Z",
+        "notes": "Rating + Amenities",
+        "sourceVersion": "A"
+      }
+    ]
+  },
+  "component:paywall-card": {
+    "versions": [
+      {
+        "label": "A",
+        "isMain": true,
+        "createdAt": "2026-03-04T12:00:00Z",
+        "notes": "Feature List"
+      },
+      {
+        "label": "B",
+        "isMain": false,
+        "createdAt": "2026-03-04T12:10:00Z",
+        "notes": "Savings Focus",
+        "sourceVersion": "A"
+      },
+      {
+        "label": "C",
+        "isMain": false,
+        "createdAt": "2026-03-04T12:20:00Z",
+        "notes": "Comparison Table",
+        "sourceVersion": "A"
+      }
+    ]
+  },
+  "screen:trip-flow-v2-interactive": {
+    "versions": [
+      {
+        "label": "A",
+        "isMain": true,
+        "createdAt": "2026-03-04T14:00:00Z",
+        "notes": "State machine with branching paths"
+      }
+    ]
+  },
+  "component:axel-chat-container": {
+    "versions": [
+      {
+        "label": "A",
+        "isMain": true,
+        "createdAt": "2026-03-04T00:00:00Z",
+        "notes": "Chat bubble with AXEL label, message, children, actions"
+      }
+    ]
+  },
+  "component:bottom-nav": {
+    "versions": [
+      {
+        "label": "A",
+        "isMain": true,
+        "createdAt": "2026-03-05T00:00:00Z",
+        "notes": "3-tab nav: Home, Trips, Settings"
+      }
+    ]
+  },
+  "component:status-bar": {
+    "versions": [
+      {
+        "label": "A",
+        "isMain": true,
+        "createdAt": "2026-03-05T00:00:00Z",
+        "notes": "iOS status bar: 9:41 + signal icons"
+      }
+    ]
+  },
+  "component:home-indicator": {
+    "versions": [
+      {
+        "label": "A",
+        "isMain": true,
+        "createdAt": "2026-03-05T00:00:00Z",
+        "notes": "Bottom home indicator bar"
+      }
+    ]
+  },
+  "component:quick-option-pills": {
+    "versions": [
+      {
+        "label": "A",
+        "isMain": true,
+        "createdAt": "2026-03-05T00:00:00Z",
+        "notes": "Pink pill buttons for trip quick options"
+      }
+    ]
+  },
+  "component:trip-input-bar": {
+    "versions": [
+      {
+        "label": "A",
+        "isMain": true,
+        "createdAt": "2026-03-05T00:00:00Z",
+        "notes": "Trip description input with Start button"
+      }
+    ]
+  },
+  "screen:walkthrough": {
+    "versions": [
+      {
+        "label": "A",
+        "isMain": true,
+        "createdAt": "2026-03-06T00:00:00Z",
+        "notes": "5-step walkthrough carousel"
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "fl_001",
+    "from": "SEA",
+    "from_city": "Seattle, WA",
+    "to": "LAX",
+    "to_city": "Los Angeles, CA",
+    "stops": "Nonstop",
+    "depart_time": "6:00 AM",
+    "arrive_time": "8:30 AM",
+    "date": "Mar 5",
+    "price": 318,
+    "saved": 160,
+    "airline": "Alaska Airlines",
+    "flight_number": "AS 1247",
+    "confirmation": "AXLK82"
+  },
+  {
+    "id": "fl_002",
+    "from": "SEA",
+    "from_city": "Seattle, WA",
+    "to": "LAX",
+    "to_city": "Los Angeles, CA",
+    "stops": "1 stop",
+    "depart_time": "10:15 AM",
+    "arrive_time": "2:45 PM",
+    "date": "Mar 5",
+    "price": 345,
+    "saved": 133,
+    "airline": "Delta",
+    "flight_number": "DL 5631",
+    "confirmation": "AXLD49"
+  },
+  {
+    "id": "fl_003",
+    "from": "SEA",
+    "from_city": "Seattle, WA",
+    "to": "LAX",
+    "to_city": "Los Angeles, CA",
+    "stops": "Nonstop",
+    "depart_time": "3:30 PM",
+    "arrive_time": "6:00 PM",
+    "date": "Mar 6",
+    "price": 378,
+    "saved": 100,
+    "airline": "Alaska Airlines",
+    "flight_number": "AS 982",
+    "confirmation": "AXLK17"
+  }
+]

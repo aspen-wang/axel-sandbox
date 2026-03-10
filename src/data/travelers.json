@@ -1,0 +1,22 @@
+[
+  {
+    "id": "t_001",
+    "first_name": "Alex",
+    "last_name": "Morgan",
+    "email": "alex.morgan@gmail.com",
+    "dob": "1992-06-15",
+    "passport": "US****4821",
+    "frequent_flyer": "Alaska MVP Gold 2847291",
+    "phone": "+1 (206) 555-0147"
+  },
+  {
+    "id": "t_002",
+    "first_name": "Jordan",
+    "last_name": "Chen",
+    "email": "jordan.chen@outlook.com",
+    "dob": "1988-11-03",
+    "passport": "US****7193",
+    "frequent_flyer": "Delta SkyMiles 9103847",
+    "phone": "+1 (425) 555-0283"
+  }
+]

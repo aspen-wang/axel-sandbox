@@ -1,0 +1,40 @@
+[
+  {
+    "id": "__current__",
+    "name": "__current__",
+    "variants": {
+      "flightDealCard": "A",
+      "hotelDealCard": "F",
+      "thinkingBubble": "K",
+      "tripCard": "I",
+      "confirmedFlightCard": "A",
+      "priceBreakdownCard": "A",
+      "confirmedBookingCard": "C",
+      "orderSummaryCard": "F",
+      "paywallCard": "B",
+      "hotelMapPeekCard": "C",
+      "savedPaymentCard": "A",
+      "axelPanel": "A",
+      "stepProgress": "A"
+    },
+    "createdAt": "2026-03-06T22:16:35.244Z"
+  },
+  {
+    "id": "combo_1772678044200",
+    "name": "Saved",
+    "variants": {
+      "flightDealCard": "A",
+      "hotelDealCard": "F",
+      "thinkingBubble": "K",
+      "tripCard": "I",
+      "confirmedFlightCard": "A",
+      "priceBreakdownCard": "A",
+      "confirmedBookingCard": "C",
+      "orderSummaryCard": "F",
+      "paywallCard": "B",
+      "hotelMapPeekCard": "C",
+      "savedPaymentCard": "A"
+    },
+    "createdAt": "2026-03-05T02:34:04.200Z"
+  }
+]

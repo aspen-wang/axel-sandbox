@@ -1,0 +1,30 @@
+{
+  "total_checks": 847,
+  "checks_today": 14,
+  "last_check": "2 min ago",
+  "price_history": [
+    { "date": "Dec 25", "price": 520 },
+    { "date": "Jan 5", "price": 580 },
+    { "date": "Jan 15", "price": 545 },
+    { "date": "Jan 25", "price": 510 },
+    { "date": "Feb 5", "price": 495 },
+    { "date": "Feb 15", "price": 478 },
+    { "date": "Feb 25", "price": 460 },
+    { "date": "Mar 1", "price": 478 }
+  ],
+  "route_insights": {
+    "best_day": "Tuesday",
+    "best_time": "Early morning",
+    "avg_savings": "$127",
+    "price_drop_chance": "72%",
+    "typical_hold_time": "36 hours",
+    "cheapest_month": "March"
+  },
+  "savings_potential": {
+    "current_price": 478,
+    "target_price": 400,
+    "potential_savings": 78,
+    "historical_low": 312,
+    "historical_avg": 445
+  }
+}

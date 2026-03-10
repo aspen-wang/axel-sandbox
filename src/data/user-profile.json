@@ -1,0 +1,9 @@
+{
+  "id": "usr_demo",
+  "name": "Demo User",
+  "email": "demo@axel.app",
+  "target_price": 400,
+  "watched_routes": [
+    { "from": "SEA", "to": "LAX" }
+  ]
+}

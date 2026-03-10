@@ -1,0 +1,576 @@
+[
+  {
+    "id": "cap_1772237932698",
+    "type": "flow",
+    "slug": "flight-hold",
+    "targetPage": "Flow — Flight Hold",
+    "urls": [
+      "http://localhost:3000/flow/flight-hold"
+    ],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-02-28T00:18:52.698Z"
+  },
+  {
+    "id": "cap_1772237948953",
+    "type": "flow",
+    "slug": "flight-hold",
+    "targetPage": "Captures",
+    "urls": [
+      "http://localhost:3000/flow/flight-hold"
+    ],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-02-28T00:19:08.953Z"
+  },
+  {
+    "id": "cap_1772239577814",
+    "type": "dressroom",
+    "slug": "flight-card-A",
+    "targetPage": "Captures",
+    "urls": [],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-02-28T00:46:17.814Z"
+  },
+  {
+    "id": "cap_1772239577818",
+    "type": "dressroom",
+    "slug": "flight-card-B",
+    "targetPage": "Captures",
+    "urls": [],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-02-28T00:46:17.818Z"
+  },
+  {
+    "id": "cap_1772239577823",
+    "type": "dressroom",
+    "slug": "flight-card-C",
+    "targetPage": "Captures",
+    "urls": [],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-02-28T00:46:17.823Z"
+  },
+  {
+    "id": "cap_1772239577830",
+    "type": "dressroom",
+    "slug": "flight-card-D",
+    "targetPage": "Captures",
+    "urls": [],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-02-28T00:46:17.830Z"
+  },
+  {
+    "id": "cap_1772239577837",
+    "type": "dressroom",
+    "slug": "flight-card-E",
+    "targetPage": "Captures",
+    "urls": [],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-02-28T00:46:17.837Z"
+  },
+  {
+    "id": "cap_1772240237817",
+    "type": "flow",
+    "slug": "flight-hold",
+    "targetPage": "Flow — Flight Hold",
+    "urls": [
+      "http://localhost:3000/flow/flight-hold"
+    ],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-02-28T00:57:17.817Z"
+  },
+  {
+    "id": "cap_1772240276206",
+    "type": "dressroom",
+    "slug": "flight-card-C",
+    "targetPage": "Iterations — FlightCard",
+    "urls": [],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-02-28T00:57:56.206Z"
+  },
+  {
+    "id": "cap_1772240287386",
+    "type": "dressroom",
+    "slug": "flight-card-A",
+    "targetPage": "Iterations — FlightCard",
+    "urls": [],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-02-28T00:58:07.386Z"
+  },
+  {
+    "id": "cap_1772240287398",
+    "type": "dressroom",
+    "slug": "flight-card-B",
+    "targetPage": "Iterations — FlightCard",
+    "urls": [],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-02-28T00:58:07.398Z"
+  },
+  {
+    "id": "cap_1772240287407",
+    "type": "dressroom",
+    "slug": "flight-card-C",
+    "targetPage": "Iterations — FlightCard",
+    "urls": [],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-02-28T00:58:07.407Z"
+  },
+  {
+    "id": "cap_1772240287424",
+    "type": "dressroom",
+    "slug": "flight-card-D",
+    "targetPage": "Iterations — FlightCard",
+    "urls": [],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-02-28T00:58:07.424Z"
+  },
+  {
+    "id": "cap_1772240287540",
+    "type": "dressroom",
+    "slug": "flight-card-E",
+    "targetPage": "Iterations — FlightCard",
+    "urls": [],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-02-28T00:58:07.540Z"
+  },
+  {
+    "id": "cap_1772476143469",
+    "type": "flow",
+    "slug": "flight-hold",
+    "targetPage": "Flow — Flight Hold",
+    "urls": [
+      "http://localhost:3000/flow/flight-hold"
+    ],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-02T18:29:03.469Z"
+  },
+  {
+    "id": "cap_1772481508313",
+    "type": "dressroom",
+    "slug": "flight-result-card-A",
+    "targetPage": "Iterations — FlightResultCard",
+    "urls": [],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-02T19:58:28.313Z"
+  },
+  {
+    "id": "cap_1772481530378",
+    "type": "dressroom",
+    "slug": "flight-result-card-B",
+    "targetPage": "Iterations — FlightResultCard",
+    "urls": [],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-02T19:58:50.378Z"
+  },
+  {
+    "id": "cap_1772482143332",
+    "type": "dressroom",
+    "slug": "hotel-result-card-C",
+    "targetPage": "Iterations — HotelResultCard",
+    "urls": [],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-02T20:09:03.332Z"
+  },
+  {
+    "id": "cap_1772487297281",
+    "type": "dressroom",
+    "slug": "flight-detail-card-A",
+    "targetPage": "Iterations — FlightDetailCard",
+    "urls": [],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-02T21:34:57.281Z"
+  },
+  {
+    "id": "cap_1772487308992",
+    "type": "dressroom",
+    "slug": "hotel-detail-card-B",
+    "targetPage": "Iterations — HotelDetailCard",
+    "urls": [],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-02T21:35:08.992Z"
+  },
+  {
+    "id": "cap_1772488523699",
+    "type": "dressroom",
+    "slug": "hotel-deal-card-C",
+    "targetPage": "Iterations — HotelDealCard",
+    "urls": [],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-02T21:55:23.699Z"
+  },
+  {
+    "id": "cap_1772488591477",
+    "type": "dressroom",
+    "slug": "flight-results-list-B",
+    "targetPage": "Iterations — FlightResultsList",
+    "urls": [],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-02T21:56:31.477Z"
+  },
+  {
+    "id": "cap_1772489007990",
+    "type": "dressroom",
+    "slug": "flight-results-list-B",
+    "targetPage": "Iterations — FlightResultsList",
+    "urls": [],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-02T22:03:27.990Z"
+  },
+  {
+    "id": "cap_1772489167973",
+    "type": "dressroom",
+    "slug": "hotel-deal-card-B",
+    "targetPage": "Iterations — HotelDealCard",
+    "urls": [],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-02T22:06:07.973Z"
+  },
+  {
+    "id": "cap_1772495289248",
+    "type": "dressroom",
+    "slug": "flight-deal-card-C",
+    "targetPage": "Iterations — FlightDealCard",
+    "urls": [],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-02T23:48:09.248Z"
+  },
+  {
+    "id": "cap_1772497603412",
+    "type": "dressroom",
+    "slug": "watch-card-F2",
+    "targetPage": "Iterations — WatchCard",
+    "urls": [],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-03T00:26:43.412Z"
+  },
+  {
+    "id": "cap_1772497803321",
+    "type": "dressroom",
+    "slug": "watch-card-H",
+    "targetPage": "Iterations — WatchCard",
+    "urls": [],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-03T00:30:03.321Z"
+  },
+  {
+    "id": "cap_1772497848286",
+    "type": "dressroom",
+    "slug": "watch-card-A",
+    "targetPage": "Iterations — WatchCard",
+    "urls": [],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-03T00:30:48.286Z"
+  },
+  {
+    "id": "cap_1772497848296",
+    "type": "dressroom",
+    "slug": "watch-card-B",
+    "targetPage": "Iterations — WatchCard",
+    "urls": [],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-03T00:30:48.296Z"
+  },
+  {
+    "id": "cap_1772497848304",
+    "type": "dressroom",
+    "slug": "watch-card-C",
+    "targetPage": "Iterations — WatchCard",
+    "urls": [],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-03T00:30:48.304Z"
+  },
+  {
+    "id": "cap_1772497848312",
+    "type": "dressroom",
+    "slug": "watch-card-D",
+    "targetPage": "Iterations — WatchCard",
+    "urls": [],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-03T00:30:48.312Z"
+  },
+  {
+    "id": "cap_1772497848359",
+    "type": "dressroom",
+    "slug": "watch-card-E",
+    "targetPage": "Iterations — WatchCard",
+    "urls": [],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-03T00:30:48.359Z"
+  },
+  {
+    "id": "cap_1772497848394",
+    "type": "dressroom",
+    "slug": "watch-card-F",
+    "targetPage": "Iterations — WatchCard",
+    "urls": [],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-03T00:30:48.394Z"
+  },
+  {
+    "id": "cap_1772497848430",
+    "type": "dressroom",
+    "slug": "watch-card-G",
+    "targetPage": "Iterations — WatchCard",
+    "urls": [],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-03T00:30:48.430Z"
+  },
+  {
+    "id": "cap_1772497848449",
+    "type": "dressroom",
+    "slug": "watch-card-H",
+    "targetPage": "Iterations — WatchCard",
+    "urls": [],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-03T00:30:48.449Z"
+  },
+  {
+    "id": "cap_1772497848489",
+    "type": "dressroom",
+    "slug": "watch-card-F1",
+    "targetPage": "Iterations — WatchCard",
+    "urls": [],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-03T00:30:48.489Z"
+  },
+  {
+    "id": "cap_1772497848505",
+    "type": "dressroom",
+    "slug": "watch-card-F2",
+    "targetPage": "Iterations — WatchCard",
+    "urls": [],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-03T00:30:48.505Z"
+  },
+  {
+    "id": "cap_1772497848549",
+    "type": "dressroom",
+    "slug": "watch-card-F3",
+    "targetPage": "Iterations — WatchCard",
+    "urls": [],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-03T00:30:48.549Z"
+  },
+  {
+    "id": "cap_1772498263588",
+    "type": "dressroom",
+    "slug": "watch-card-K",
+    "targetPage": "Iterations — WatchCard",
+    "urls": [],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-03T00:37:43.588Z"
+  },
+  {
+    "id": "cap_1772498627923",
+    "type": "dressroom",
+    "slug": "watch-card-F1",
+    "targetPage": "Iterations — WatchCard",
+    "urls": [
+      "http://localhost:3000/preview/dressroom/watch-card?v=F1&screen=home-watch"
+    ],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-03T00:43:47.923Z"
+  },
+  {
+    "id": "cap_1772498673277",
+    "type": "dressroom",
+    "slug": "watch-card-F3",
+    "targetPage": "Iterations — WatchCard",
+    "urls": [
+      "http://localhost:3000/preview/dressroom/watch-card?v=F3&screen=home-watch"
+    ],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-03T00:44:33.277Z"
+  },
+  {
+    "id": "cap_1772499808916",
+    "type": "dressroom",
+    "slug": "watch-card-F3-A",
+    "targetPage": "Iterations — WatchCard",
+    "urls": [
+      "http://localhost:3000/preview/dressroom/watch-card?v=F3-A&screen=home-watch"
+    ],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-03T01:03:28.916Z"
+  },
+  {
+    "id": "cap_1772499808922",
+    "type": "dressroom",
+    "slug": "watch-card-F3-B",
+    "targetPage": "Iterations — WatchCard",
+    "urls": [
+      "http://localhost:3000/preview/dressroom/watch-card?v=F3-B&screen=home-watch"
+    ],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-03T01:03:28.922Z"
+  },
+  {
+    "id": "cap_1772499808937",
+    "type": "dressroom",
+    "slug": "watch-card-F3-C",
+    "targetPage": "Iterations — WatchCard",
+    "urls": [
+      "http://localhost:3000/preview/dressroom/watch-card?v=F3-C&screen=home-watch"
+    ],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-03T01:03:28.937Z"
+  },
+  {
+    "id": "cap_1772499808942",
+    "type": "dressroom",
+    "slug": "watch-card-F3-D",
+    "targetPage": "Iterations — WatchCard",
+    "urls": [
+      "http://localhost:3000/preview/dressroom/watch-card?v=F3-D&screen=home-watch"
+    ],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-03T01:03:28.942Z"
+  },
+  {
+    "id": "cap_1772499808947",
+    "type": "dressroom",
+    "slug": "watch-card-F3-E",
+    "targetPage": "Iterations — WatchCard",
+    "urls": [
+      "http://localhost:3000/preview/dressroom/watch-card?v=F3-E&screen=home-watch"
+    ],
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-03T01:03:28.947Z"
+  },
+  {
+    "id": "cap_1772590696933",
+    "type": "screen",
+    "slug": "importing",
+    "targetPage": "Iterations — FlightCard",
+    "urls": [
+      "http://localhost:3000/screen/importing"
+    ],
+    "frameLabel": "Price Watch",
+    "figmaDestinationUrl": "https://www.figma.com/design/9pbBXxSus03lQbq9ErSCmO/Axel-One?node-id=5421-12159&t=xnKjMC2R5CneKz9L-1",
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-04T02:18:16.933Z"
+  },
+  {
+    "id": "cap_1772591185670",
+    "type": "screen",
+    "slug": "importing",
+    "targetPage": "Iterations — FlightCard",
+    "urls": [
+      "http://localhost:3000/screen/importing"
+    ],
+    "frameLabel": "Price Watch",
+    "figmaDestinationUrl": "https://www.figma.com/design/9pbBXxSus03lQbq9ErSCmO/Axel-One?node-id=5421-12159&t=xnKjMC2R5CneKz9L-1",
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-04T02:26:25.670Z"
+  },
+  {
+    "id": "cap_1772591196937",
+    "type": "screen",
+    "slug": "importing",
+    "targetPage": "Iterations — FlightCard",
+    "urls": [
+      "http://localhost:3000/screen/importing"
+    ],
+    "frameLabel": "Price Watch",
+    "figmaDestinationUrl": "https://www.figma.com/design/9pbBXxSus03lQbq9ErSCmO/Axel-One?node-id=5421-12159&t=xnKjMC2R5CneKz9L-1",
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-04T02:26:36.937Z"
+  },
+  {
+    "id": "cap_1772591203587",
+    "type": "screen",
+    "slug": "chat-thinking",
+    "targetPage": "Iterations — FlightCard",
+    "urls": [
+      "http://localhost:3000/screen/chat-thinking"
+    ],
+    "frameLabel": "Chat Thinking",
+    "figmaDestinationUrl": "https://www.figma.com/design/9pbBXxSus03lQbq9ErSCmO/Axel-One?node-id=5421-12159&t=xnKjMC2R5CneKz9L-1",
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-04T02:26:43.587Z"
+  },
+  {
+    "id": "cap_1772665814369",
+    "type": "component",
+    "slug": "trip-card",
+    "targetPage": "Axel Chat",
+    "urls": [
+      "http://localhost:3000/preview/component-export?slugs=trip-card"
+    ],
+    "frameLabel": null,
+    "figmaDestinationUrl": null,
+    "dimensions": {
+      "width": 2157,
+      "height": 600
+    },
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-04T23:10:14.369Z"
+  },
+  {
+    "id": "cap_1772665822913",
+    "type": "component",
+    "slug": "trip-card",
+    "targetPage": "Axel Chat",
+    "urls": [
+      "http://localhost:3000/preview/component-export?slugs=trip-card"
+    ],
+    "frameLabel": null,
+    "figmaDestinationUrl": null,
+    "dimensions": {
+      "width": 2157,
+      "height": 600
+    },
+    "status": "pending",
+    "figmaUrl": null,
+    "createdAt": "2026-03-04T23:10:22.913Z"
+  }
+]

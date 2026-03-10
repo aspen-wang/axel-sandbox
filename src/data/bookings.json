@@ -1,0 +1,11 @@
+[
+  {
+    "id": "bk_001",
+    "user_id": "usr_demo",
+    "flight_id": "fl_001",
+    "status": "confirmed",
+    "booked_at": "2025-03-01T10:30:00Z",
+    "price_paid": 318,
+    "original_price": 478
+  }
+]

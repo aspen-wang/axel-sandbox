@@ -1,0 +1,368 @@
+{
+  "trip-flow": {
+    "nodes": [
+      {
+        "id": "trips-empty",
+        "type": "screen",
+        "x": 29.66796875,
+        "y": 19.27734375,
+        "label": "Trips Empty",
+        "description": "Empty state — no trips yet",
+        "screenSlug": "trips-empty"
+      },
+      {
+        "id": "trips-list",
+        "type": "screen",
+        "x": 180,
+        "y": 20,
+        "label": "Trips List",
+        "description": "Active trips with status indicators",
+        "screenSlug": "trips-list"
+      },
+      {
+        "id": "new-trip-input",
+        "type": "screen",
+        "x": 348.6875,
+        "y": 0,
+        "label": "New Trip Input",
+        "description": "Describe your trip to Axel",
+        "screenSlug": "new-trip-input"
+      },
+      {
+        "id": "chat-thinking",
+        "type": "screen",
+        "x": 514.921142578125,
+        "y": 15.40484619140625,
+        "label": "Chat Thinking",
+        "description": "Axel searching for flights",
+        "screenSlug": "chat-thinking"
+      },
+      {
+        "id": "chat-flights",
+        "type": "screen",
+        "x": 657.91796875,
+        "y": 0,
+        "label": "Chat Flights",
+        "description": "Flight options in chat",
+        "screenSlug": "chat-flights"
+      },
+      {
+        "id": "chat-flight-booked",
+        "type": "screen",
+        "x": 845.06640625,
+        "y": 23.75390625,
+        "label": "Flight Booked",
+        "description": "Flight confirmed, searching hotels",
+        "screenSlug": "chat-flight-booked"
+      },
+      {
+        "id": "chat-hotels",
+        "type": "screen",
+        "x": 1039.2039794921875,
+        "y": 29.7421875,
+        "label": "Chat Hotels",
+        "description": "Hotel options in chat",
+        "screenSlug": "chat-hotels"
+      },
+      {
+        "id": "hotel-map",
+        "type": "screen",
+        "x": 1188.28125,
+        "y": 41.84375,
+        "label": "Hotel Map",
+        "description": "Hotels on map with price pins",
+        "screenSlug": "hotel-map"
+      },
+      {
+        "id": "hotel-detail",
+        "type": "screen",
+        "x": 1362.515625,
+        "y": 49.01953125,
+        "label": "Hotel Detail",
+        "description": "Full hotel detail with gallery",
+        "screenSlug": "hotel-detail"
+      },
+      {
+        "id": "itinerary-summary",
+        "type": "screen",
+        "x": 1518.99609375,
+        "y": 46.7265625,
+        "label": "Itinerary Summary",
+        "description": "Flight + hotel + price + traveler details",
+        "screenSlug": "itinerary-summary"
+      },
+      {
+        "id": "trip-paywall",
+        "type": "screen",
+        "x": 1743.54296875,
+        "y": 41.3828125,
+        "label": "Trip Paywall",
+        "description": "Membership required to book",
+        "screenSlug": "trip-paywall"
+      },
+      {
+        "id": "trip-payment",
+        "type": "screen",
+        "x": 2031.59375,
+        "y": 43.23046875,
+        "label": "Trip Payment",
+        "description": "Payment method + price breakdown",
+        "screenSlug": "trip-payment"
+      },
+      {
+        "id": "trip-confirmation",
+        "type": "screen",
+        "x": 2267.55859375,
+        "y": 103.66796875,
+        "label": "Trip Confirmation",
+        "description": "Trip booked confirmation",
+        "screenSlug": "trip-confirmation"
+      },
+      {
+        "id": "scene-new-trip",
+        "type": "screen",
+        "x": 29,
+        "y": 300,
+        "label": "Turn: New Trip",
+        "description": "Axel greeting + suggestions",
+        "screenSlug": "scene-new-trip"
+      },
+      {
+        "id": "scene-context",
+        "type": "screen",
+        "x": 280,
+        "y": 300,
+        "label": "Turn: Options",
+        "description": "Flights + Hotels + Map selection",
+        "screenSlug": "scene-context"
+      },
+      {
+        "id": "scene-cached",
+        "type": "screen",
+        "x": 530,
+        "y": 300,
+        "label": "Turn: Re-entry",
+        "description": "Cached trip with suggestions",
+        "screenSlug": "scene-cached"
+      },
+      {
+        "id": "scene-updates",
+        "type": "screen",
+        "x": 780,
+        "y": 300,
+        "label": "Turn: Updates",
+        "description": "Price change alert",
+        "screenSlug": "scene-updates"
+      },
+      {
+        "id": "scene-decision",
+        "type": "screen",
+        "x": 1030,
+        "y": 300,
+        "label": "Turn: Confirmed",
+        "description": "Confirmed trip summary",
+        "screenSlug": "scene-decision"
+      }
+    ],
+    "edges": [
+      {
+        "id": "tf-e1",
+        "source": "trips-empty",
+        "target": "trips-list",
+        "label": "Has trips"
+      },
+      {
+        "id": "tf-e2",
+        "source": "trips-list",
+        "target": "new-trip-input",
+        "label": "+ New Trip"
+      },
+      {
+        "id": "tf-e3",
+        "source": "new-trip-input",
+        "target": "chat-thinking",
+        "label": "Send message"
+      },
+      {
+        "id": "tf-e4",
+        "source": "chat-thinking",
+        "target": "chat-flights",
+        "label": "Results ready"
+      },
+      {
+        "id": "tf-e5",
+        "source": "chat-flights",
+        "target": "chat-flight-booked",
+        "label": "Select flight"
+      },
+      {
+        "id": "tf-e6",
+        "source": "chat-flight-booked",
+        "target": "chat-hotels",
+        "label": "Hotels found"
+      },
+      {
+        "id": "tf-e7",
+        "source": "chat-hotels",
+        "target": "hotel-map",
+        "label": "Show on map"
+      },
+      {
+        "id": "tf-e8",
+        "source": "hotel-map",
+        "target": "hotel-detail",
+        "label": "Select hotel"
+      },
+      {
+        "id": "tf-e9",
+        "source": "hotel-detail",
+        "target": "itinerary-summary",
+        "label": "Confirm hotel"
+      },
+      {
+        "id": "tf-e10",
+        "source": "itinerary-summary",
+        "target": "trip-paywall",
+        "label": "Continue"
+      },
+      {
+        "id": "tf-e11",
+        "source": "trip-paywall",
+        "target": "trip-payment",
+        "label": "Become member"
+      },
+      {
+        "id": "tf-e12",
+        "source": "trip-payment",
+        "target": "trip-confirmation",
+        "label": "Pay"
+      },
+      {
+        "id": "tf-s1",
+        "source": "scene-new-trip",
+        "target": "scene-context",
+        "label": "Show options"
+      },
+      {
+        "id": "tf-s2",
+        "source": "scene-context",
+        "target": "scene-cached",
+        "label": "Lock picks"
+      },
+      {
+        "id": "tf-s3",
+        "source": "scene-cached",
+        "target": "scene-updates",
+        "label": "Keep watching"
+      },
+      {
+        "id": "tf-s4",
+        "source": "scene-cached",
+        "target": "scene-decision",
+        "label": "Book now"
+      },
+      {
+        "id": "tf-s5",
+        "source": "scene-updates",
+        "target": "scene-decision",
+        "label": "Confirm"
+      }
+    ]
+  },
+  "walkthrough-flow": {
+    "nodes": [
+      {
+        "id": "wt-step-1",
+        "type": "screen",
+        "x": 0,
+        "y": 0,
+        "label": "Tell Axel",
+        "description": "Describe your dream trip",
+        "screenSlug": "walkthrough"
+      },
+      {
+        "id": "wt-step-2",
+        "type": "screen",
+        "x": 200,
+        "y": 0,
+        "label": "Plan & Book",
+        "description": "Axel plans, you book in one tap",
+        "screenSlug": "walkthrough"
+      },
+      {
+        "id": "wt-step-3",
+        "type": "screen",
+        "x": 400,
+        "y": 0,
+        "label": "Reprice",
+        "description": "Already booked? Axel watches for repricing",
+        "screenSlug": "walkthrough"
+      },
+      {
+        "id": "wt-step-4",
+        "type": "screen",
+        "x": 600,
+        "y": 0,
+        "label": "Come Back",
+        "description": "Trip persists + price tracking",
+        "screenSlug": "walkthrough"
+      },
+      {
+        "id": "wt-step-5",
+        "type": "screen",
+        "x": 800,
+        "y": 0,
+        "label": "Paywall",
+        "description": "Become Axel One or continue free",
+        "screenSlug": "walkthrough"
+      },
+      {
+        "id": "wt-step-6",
+        "type": "screen",
+        "x": 1000,
+        "y": 0,
+        "label": "All Trips",
+        "description": "All trips managed in one place",
+        "screenSlug": "walkthrough"
+      }
+    ],
+    "edges": [
+      {
+        "id": "wt-e1",
+        "source": "wt-step-1",
+        "target": "wt-step-2",
+        "label": "Next"
+      },
+      {
+        "id": "wt-e2",
+        "source": "wt-step-2",
+        "target": "wt-step-3",
+        "label": "Next"
+      },
+      {
+        "id": "wt-e3",
+        "source": "wt-step-3",
+        "target": "wt-step-4",
+        "label": "Next"
+      },
+      {
+        "id": "wt-e4",
+        "source": "wt-step-4",
+        "target": "wt-step-5",
+        "label": "Meet Axel One"
+      },
+      {
+        "id": "wt-e5a",
+        "source": "wt-step-5",
+        "target": "wt-step-6",
+        "label": "Become Axel One"
+      },
+      {
+        "id": "wt-e5b",
+        "source": "wt-step-5",
+        "target": "wt-step-6",
+        "label": "Continue Free"
+      }
+    ]
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "name": "Axel One",
+    "version": "1.1",
+    "lastUpdated": "2026-02-27",
+    "source": "Brand Strategy Whiteboard Session, Feb 25 2026"
+  },
+  "brand": {
+    "statement": "Axel is the AI Travel Agent that saves you money",
+    "voice": ["Epochal", "Value-Driven", "Thoughtful"],
+    "personality": ["Simple", "Value-focused", "Playful but trustworthy", "Cute", "3D Axel"],
+    "mascot": "Axolotl (3D)",
+    "visualDirection": "Rising Visual — Modern + Premium, elevated yet accessible"
+  },
+  "colors": {
+    "dark": [
+      { "token": "main", "value": "#EF508D", "label": "Main (Pink)", "category": "accent" },
+      { "token": "green", "value": "#4FC660", "label": "Green", "category": "accent" },
+      { "token": "blue", "value": "#0090FF", "label": "Blue", "category": "accent" },
+      { "token": "red", "value": "#FF3333", "label": "Red", "category": "accent" },
+      { "token": "orange", "value": "#FB7A29", "label": "Orange (Legacy)", "category": "accent" },
+      { "token": "bg", "value": "#181818", "label": "Background", "category": "surface" },
+      { "token": "bg-2", "value": "#242424", "label": "Background 2", "category": "surface" },
+      { "token": "card-bg", "value": "#212121", "label": "Card Background", "category": "surface" },
+      { "token": "grey", "value": "#474747", "label": "Grey", "category": "surface" },
+      { "token": "text-1", "value": "#FFFFFF", "label": "Primary Text", "category": "text" },
+      { "token": "text-2", "value": "#989898", "label": "Secondary Text", "category": "text" },
+      { "token": "secondary", "value": "#C2C2C2", "label": "Secondary", "category": "text" },
+      { "token": "button-text", "value": "#FFFFFF", "label": "Button Text", "category": "text" }
+    ],
+    "light": [
+      { "token": "main", "value": "#EF508D", "label": "Main (Pink)", "category": "accent" },
+      { "token": "green", "value": "#4FC660", "label": "Green", "category": "accent" },
+      { "token": "blue", "value": "#005EDB", "label": "Blue", "category": "accent" },
+      { "token": "red", "value": "#E40101", "label": "Red", "category": "accent" },
+      { "token": "bg", "value": "#FFFFFF", "label": "Background", "category": "surface" },
+      { "token": "bg-2", "value": "#F3F4F6", "label": "Background 2", "category": "surface" },
+      { "token": "card-bg", "value": "#F4F4F4", "label": "Card Background", "category": "surface" },
+      { "token": "grey", "value": "#D9D9D9", "label": "Grey", "category": "surface" },
+      { "token": "text-1", "value": "#000000", "label": "Primary Text", "category": "text" },
+      { "token": "text-2", "value": "#6D6D6D", "label": "Secondary Text", "category": "text" },
+      { "token": "secondary", "value": "#525C6E", "label": "Secondary", "category": "text" },
+      { "token": "button-text", "value": "#FFFFFF", "label": "Button Text", "category": "text" }
+    ],
+    "opacityVariants": [
+      { "base": "main", "name": "Main 30", "alpha": 0.2 },
+      { "base": "main", "name": "Main 5", "alpha": 0.15 },
+      { "base": "green", "name": "Green 10", "alpha": 0.2 },
+      { "base": "blue", "name": "Blue 10", "alpha": 0.2 },
+      { "base": "secondary", "name": "Secondary 5", "alpha": 0.1 }
+    ]
+  },
+  "typography": {
+    "fonts": [
+      { "name": "Lato", "role": "Universal", "weights": [300, 400, 700, 900], "usage": "All text — headings, body, labels, buttons, navigation, numbers" }
+    ],
+    "rules": {
+      "minSize": "11px",
+      "maxSize": "28px",
+      "headingTracking": "Negative (tighter at larger sizes)",
+      "smallTextTracking": "Positive (looser at smaller sizes)",
+      "headingLeading": "Tight (1.15–1.35)",
+      "bodyLeading": "Relaxed (1.4–1.5)"
+    },
+    "scale": [
+      { "token": "display", "name": "Display", "fontFamily": "Lato", "weight": 900, "size": "28px", "lineHeight": "1.15", "tracking": "-0.02em", "class": "type-display", "sampleText": "$1,247", "usage": "Hero numbers, large prices" },
+      { "token": "title-1", "name": "Title 1", "fontFamily": "Lato", "weight": 700, "size": "20px", "lineHeight": "1.25", "tracking": "-0.015em", "class": "type-title-1", "sampleText": "Flight price dropped", "usage": "Screen titles, section headers" },
+      { "token": "title-2", "name": "Title 2", "fontFamily": "Lato", "weight": 700, "size": "16px", "lineHeight": "1.3", "tracking": "-0.01em", "class": "type-title-2", "sampleText": "San Francisco → Tokyo", "usage": "Card titles, sub-headers" },
+      { "token": "title-3", "name": "Title 3", "fontFamily": "Lato", "weight": 700, "size": "14px", "lineHeight": "1.35", "tracking": "-0.005em", "class": "type-title-3", "sampleText": "Alaska Airlines AS 224", "usage": "Bold inline, small headers" },
+      { "token": "body", "name": "Body", "fontFamily": "Lato", "weight": 400, "size": "14px", "lineHeight": "1.5", "tracking": "0", "class": "type-body", "sampleText": "Nonstop · 10h 45m · Economy", "usage": "Default reading text" },
+      { "token": "body-sm", "name": "Body Small", "fontFamily": "Lato", "weight": 400, "size": "13px", "lineHeight": "1.45", "tracking": "0.005em", "class": "type-body-sm", "sampleText": "Confirmation #AS82KL", "usage": "Secondary content, details" },
+      { "token": "caption", "name": "Caption", "fontFamily": "Lato", "weight": 400, "size": "12px", "lineHeight": "1.4", "tracking": "0.01em", "class": "type-caption", "sampleText": "Round trip · Feb 15–22", "usage": "Metadata, timestamps" },
+      { "token": "label", "name": "Label", "fontFamily": "Lato", "weight": 700, "size": "11px", "lineHeight": "1.35", "tracking": "0.03em", "class": "type-label", "sampleText": "Price Watch", "usage": "UI labels, tags, buttons" },
+      { "token": "overline", "name": "Overline", "fontFamily": "Lato", "weight": 900, "size": "11px", "lineHeight": "1.35", "tracking": "0.08em", "class": "type-overline", "sampleText": "BEST DEAL", "usage": "Category headers (uppercase)" }
+    ]
+  },
+  "spacing": [
+    { "name": "2xs", "value": "2px" },
+    { "name": "xs", "value": "4px" },
+    { "name": "sm", "value": "8px" },
+    { "name": "md", "value": "12px" },
+    { "name": "lg", "value": "16px" },
+    { "name": "xl", "value": "24px" }
+  ],
+  "radii": [
+    { "name": "sm", "value": "4px" },
+    { "name": "md", "value": "8px" },
+    { "name": "lg", "value": "12px" },
+    { "name": "xl", "value": "20px" },
+    { "name": "full", "value": "30px" }
+  ],
+  "icons": {
+    "source": "Figma Icons Library",
+    "figmaFileKey": "rIGmDaOjtN15zwR6dY8Lwv",
+    "categories": [
+      { "name": "Navigation", "description": "Directional and wayfinding icons" },
+      { "name": "Travel", "description": "Transport, lodging, and trip-related" },
+      { "name": "Commerce", "description": "Payments, pricing, and transactions" },
+      { "name": "Actions", "description": "Common user interactions" },
+      { "name": "Communication", "description": "Messaging and notifications" },
+      { "name": "System", "description": "UI controls and system indicators" }
+    ]
+  },
+  "components": [
+    {
+      "name": "FlightCard",
+      "slug": "flight-card",
+      "description": "Displays flight details including airline, route, times, and pricing with savings highlight.",
+      "variants": ["A", "B", "C", "D"]
+    },
+    {
+      "name": "PriceChart",
+      "slug": "price-chart",
+      "description": "SVG-based price history chart with gradient fill, trend line, and current price indicator.",
+      "variants": ["A"]
+    }
+  ]
+}
