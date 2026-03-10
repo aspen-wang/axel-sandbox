@@ -41,7 +41,7 @@ export default function DashboardShell({ screens, flows, components, iterations:
   const [selectedSlug, setSelectedSlug] = useState(null)
   const [collapsedFlows, setCollapsedFlows] = useState(() => Object.fromEntries(flows.map((f) => [f.slug, true])))
   const [researchCollapsed, setResearchCollapsed] = useState(false)
-  const [sidebarTab, setSidebarTab] = useState('flows')
+  const [sidebarTab, setSidebarTab] = useState('sandbox')
   const [flowOverview, setFlowOverview] = useState(false)
   const [screenVersion, setScreenVersion] = useState(null) // null = main (A), or 'B', 'C', etc.
 
@@ -719,95 +719,97 @@ export default function DashboardShell({ screens, flows, components, iterations:
     <div className="h-screen bg-black text-white flex flex-col overflow-hidden">
 
       {/* ── HEADER ── */}
-      <header className="h-[50px] flex items-center px-[20px] border-b border-[#1A1A1A] shrink-0 gap-[16px]">
-        <div className="flex items-center gap-[9px] shrink-0">
-          <div className="w-[26px] h-[26px] rounded-[7px] bg-[#EF508D]/15 flex items-center justify-center text-[#EF508D] text-[12px]">A</div>
-          <span className="text-[15px] text-white">Axel One</span>
-        </div>
+      <header className="h-[46px] flex items-center px-[16px] border-b border-[#141414] shrink-0 gap-[2px]">
+        {/* Logo mark */}
+        <div className="w-[28px] h-[28px] rounded-[7px] bg-[#EF508D]/12 flex items-center justify-center text-[#EF508D] text-[11px] shrink-0 mr-[6px]">A</div>
+        {/* View tabs */}
+        {[
+          { key: 'sandbox', label: 'Sandbox' },
+          { key: 'flows', label: 'Flows' },
+          { key: 'components', label: 'Components' },
+        ].map(({ key, label }) => (
+          <button
+            key={key}
+            onClick={() => setSidebarTab(key)}
+            className={`px-[12px] h-[32px] rounded-[8px] text-[13px] transition ${
+              sidebarTab === key
+                ? 'text-white bg-[#1A1A1A]'
+                : 'text-[#4A4A4A] hover:text-[#888] hover:bg-[#0D0D0D]'
+            }`}
+          >
+            {label}
+          </button>
+        ))}
         <div className="flex-1" />
         {deletedItems.length > 0 && (
-          <button onClick={() => setTrashOpen(true)} className="flex items-center gap-[5px] text-[#555] text-[12px] hover:text-white transition px-[8px] py-[5px] rounded-[7px] hover:bg-[#111]">
+          <button onClick={() => setTrashOpen(true)} className="flex items-center gap-[5px] text-[#444] text-[12px] hover:text-white transition px-[8px] py-[5px] rounded-[7px] hover:bg-[#111]">
             <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M2 4h12M5.33 4V2.67a1.33 1.33 0 011.34-1.34h2.66a1.33 1.33 0 011.34 1.34V4M13.33 4v9.33a1.33 1.33 0 01-1.33 1.34H4a1.33 1.33 0 01-1.33-1.34V4" />
             </svg>
             {deletedItems.length}
           </button>
         )}
-        <nav className="flex items-center gap-[4px]">
-          {[
-            { href: '/screen/competitive-ux', label: 'UX Audit', external: true },
-            { href: '/screen/competitive-comparison', label: 'Planning', external: true },
-            { href: '/design-system', label: 'Design', external: false },
-            { href: '/social-campaign', label: 'Campaign', external: false },
-          ].map(({ href, label, external }) => (
-            <Link
-              key={href}
-              href={href}
-              target={external ? '_blank' : undefined}
-              className="px-[10px] py-[5px] rounded-[7px] text-[12px] text-[#666] hover:text-white hover:bg-[#111] border border-transparent hover:border-[#1A1A1A] transition"
-            >
-              {label}
-            </Link>
-          ))}
-          <button
-            onClick={() => setRightSidebarOpen((v) => !v)}
-            className={`px-[10px] py-[5px] rounded-[7px] text-[12px] transition border ${
-              rightSidebarOpen
-                ? 'text-white bg-[#111] border-[#222]'
-                : 'text-[#666] hover:text-white hover:bg-[#111] border-transparent hover:border-[#1A1A1A]'
-            }`}
-          >
-            Tools
-          </button>
-        </nav>
+        <button
+          onClick={() => setRightSidebarOpen((v) => !v)}
+          className={`ml-[4px] px-[10px] h-[32px] rounded-[8px] text-[13px] transition ${
+            rightSidebarOpen
+              ? 'text-white bg-[#1A1A1A]'
+              : 'text-[#4A4A4A] hover:text-[#888] hover:bg-[#0D0D0D]'
+          }`}
+        >
+          Tools
+        </button>
       </header>
 
       {/* ── BODY ── */}
       <div className="flex flex-1 overflow-hidden">
 
         {/* ── LEFT BROWSER PANEL ── */}
-        <nav className="w-[260px] border-r border-[#1A1A1A] bg-black flex flex-col overflow-hidden shrink-0">
-          <div className="flex-1 overflow-y-auto p-[10px] flex flex-col">
+        <nav className="w-[250px] border-r border-[#141414] bg-[#070707] flex flex-col overflow-hidden shrink-0">
+          <div className="flex-1 overflow-y-auto px-[8px] py-[8px] flex flex-col gap-[1px]">
 
+            {/* ── SANDBOX TAB (home = flows view) ── */}
+            {(sidebarTab === 'sandbox' || sidebarTab === 'flows') && (
+              <>
             {/* Walkthrough — featured */}
             {(() => {
               const isSelected = selectedType === 'screen' && selectedSlug === 'walkthrough'
               return (
                 <button
                   onClick={() => selectScreen('walkthrough')}
-                  className={`w-full flex items-center gap-[10px] px-[14px] py-[13px] rounded-[10px] text-left transition ${
-                    isSelected ? 'bg-[#1A1A1A]' : 'hover:bg-[#0D0D0D]'
+                  className={`w-full flex items-center gap-[12px] px-[12px] py-[11px] rounded-[8px] text-left transition group ${
+                    isSelected ? 'bg-[#161616]' : 'hover:bg-[#0F0F0F]'
                   }`}
                 >
-                  <div className="w-[3px] h-[30px] rounded-full bg-[#EF508D] shrink-0" />
+                  <div className={`w-[2px] h-[24px] rounded-full shrink-0 transition ${isSelected ? 'bg-[#EF508D]' : 'bg-[#EF508D]/30 group-hover:bg-[#EF508D]/60'}`} />
                   <div className="flex-1 min-w-0">
-                    <div className="text-[14px] text-white truncate">Walkthrough</div>
-                    <div className="text-[12px] text-[#555] mt-[1px]">In development</div>
+                    <div className={`text-[14px] transition ${isSelected ? 'text-white' : 'text-[#999] group-hover:text-white'}`}>Walkthrough</div>
+                    <div className="text-[11px] text-[#3A3A3A] mt-[1px]">In development</div>
                   </div>
                 </button>
               )
             })()}
 
             {/* Flows section */}
-            <div className="mt-[22px]">
-              <div className="text-[11px] text-[#3A3A3A] uppercase tracking-[0.08em] px-[4px] mb-[8px]">Flows</div>
+            <div className="mt-[18px]">
+              <div className="text-[11px] text-[#333] px-[12px] mb-[4px]">Flows</div>
               {visibleFlows.map((flow) => (
-                <div key={flow.slug} className="mb-[2px]">
+                <div key={flow.slug}>
                   <button
                     onClick={() => toggleFlow(flow.slug)}
-                    className="w-full flex items-center gap-[8px] px-[12px] py-[11px] rounded-[10px] hover:bg-[#0D0D0D] transition group"
+                    className="w-full flex items-center gap-[8px] px-[12px] py-[9px] rounded-[8px] hover:bg-[#0F0F0F] transition group"
                   >
                     <svg
-                      width="8" height="8" viewBox="0 0 10 10"
-                      className={`shrink-0 text-[#3A3A3A] transition-transform ${collapsedFlows[flow.slug] ? '' : 'rotate-90'}`}
+                      width="7" height="7" viewBox="0 0 10 10"
+                      className={`shrink-0 text-[#333] transition-transform ${collapsedFlows[flow.slug] ? '' : 'rotate-90'}`}
                     >
-                      <path d="M3 1.5l4 3.5-4 3.5" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M3 1.5l4 3.5-4 3.5" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
-                    <span className="text-[14px] text-[#888] flex-1 text-left group-hover:text-white transition truncate">{flow.name}</span>
-                    <span className="text-[12px] text-[#3A3A3A] shrink-0">{flow.steps.length}</span>
+                    <span className="text-[14px] text-[#777] flex-1 text-left group-hover:text-[#CCC] transition truncate">{flow.name}</span>
+                    <span className="text-[11px] text-[#333] shrink-0">{flow.steps.length}</span>
                   </button>
                   {!collapsedFlows[flow.slug] && (
-                    <div className="pl-[8px] mt-[2px] mb-[4px] flex flex-col gap-[1px]">
+                    <div className="pl-[12px] flex flex-col gap-[1px] mb-[2px]">
                       {flow.steps.map((stepSlug) => {
                         const screen = visibleScreens.find((s) => s.slug === stepSlug)
                         if (!screen) return null
@@ -816,8 +818,8 @@ export default function DashboardShell({ screens, flows, components, iterations:
                           <button
                             key={stepSlug}
                             onClick={() => selectScreen(stepSlug)}
-                            className={`w-full text-left px-[10px] py-[8px] rounded-[8px] text-[13px] transition ${
-                              isSelected ? 'text-white bg-[#1A1A1A]' : 'text-[#666] hover:text-[#AAA] hover:bg-[#0D0D0D]'
+                            className={`w-full text-left px-[12px] py-[7px] rounded-[7px] text-[13px] transition ${
+                              isSelected ? 'text-white bg-[#161616]' : 'text-[#555] hover:text-[#AAA] hover:bg-[#0F0F0F]'
                             }`}
                           >
                             {screen.name}
@@ -829,78 +831,81 @@ export default function DashboardShell({ screens, flows, components, iterations:
                 </div>
               ))}
             </div>
+            <div className="flex-1 min-h-[20px]" />
+              </>
+            )}
 
-            {/* Components section */}
-            <div className="mt-[22px]">
-              <div className="flex items-center justify-between px-[4px] mb-[8px]">
-                <div className="text-[11px] text-[#3A3A3A] uppercase tracking-[0.08em]">Components</div>
-                <button
-                  onClick={() => setCompSelectMode((v) => !v)}
-                  className="text-[11px] text-[#444] hover:text-[#888] transition"
-                >
-                  {compSelectMode ? 'Done' : 'Select'}
-                </button>
-              </div>
-              {visibleComponents.map((comp) => {
-                const isSelected = selectedType === 'component' && selectedSlug === comp.slug
-                const isChecked = compSelection.has(comp.slug)
-                const iterKey = `component:${comp.slug}`
-                const verCount = iterations[iterKey]?.versions?.length || 0
-                return (
-                  <button
-                    key={comp.slug}
-                    onClick={() => {
-                      if (compSelectMode) {
-                        setCompSelection((prev) => {
-                          const next = new Set(prev)
-                          if (next.has(comp.slug)) next.delete(comp.slug)
-                          else next.add(comp.slug)
-                          return next
-                        })
-                      } else {
-                        selectComponent(comp.slug)
-                      }
-                    }}
-                    className={`w-full flex items-center gap-[8px] px-[12px] py-[10px] rounded-[10px] text-left transition mb-[1px] ${
-                      (compSelectMode ? isChecked : isSelected) ? 'bg-[#1A1A1A] text-white' : 'text-[#888] hover:text-white hover:bg-[#0D0D0D]'
-                    }`}
-                  >
-                    {compSelectMode && (
-                      <div className={`w-[14px] h-[14px] rounded-[3px] border shrink-0 flex items-center justify-center ${
-                        isChecked ? 'bg-white border-white' : 'border-[#444]'
-                      }`}>
-                        {isChecked && (
-                          <svg width="8" height="8" viewBox="0 0 10 10" fill="none">
-                            <path d="M2 5.5L4 7.5L8 3" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                          </svg>
-                        )}
-                      </div>
-                    )}
-                    <span className="text-[14px] flex-1 truncate">{comp.name}</span>
-                    {verCount > 1 && <span className="text-[11px] text-[#3A3A3A] shrink-0">{verCount}v</span>}
-                  </button>
-                )
-              })}
-              {compSelectMode && compSelection.size > 0 && (
-                <button
-                  onClick={() => {
-                    const slugs = [...compSelection]
-                    const names = slugs.map((s) => components.find((c) => c.slug === s)?.name || s)
-                    setExportModalBatch({ slugs, names })
-                    setExportModalOpen(true)
-                    const compPage = figmaPages.find((p) => p.name === 'Component export')
-                    if (compPage) setExportTargetPage(compPage.name)
-                  }}
-                  className="w-full mt-[6px] py-[8px] rounded-[8px] bg-[#222] text-white text-[12px] hover:bg-[#2A2A2A] transition flex items-center justify-center gap-[4px]"
-                >
-                  Export Selected ({compSelection.size})
-                </button>
-              )}
+            {/* ── COMPONENTS TAB ── */}
+            {sidebarTab === 'components' && (
+              <>
+            <div className="flex items-center justify-between px-[12px] mb-[4px]">
+              <div className="text-[11px] text-[#333]">Components</div>
+              <button
+                onClick={() => setCompSelectMode((v) => !v)}
+                className="text-[11px] text-[#444] hover:text-[#888] transition"
+              >
+                {compSelectMode ? 'Done' : 'Select'}
+              </button>
             </div>
+            {visibleComponents.map((comp) => {
+              const isSelected = selectedType === 'component' && selectedSlug === comp.slug
+              const isChecked = compSelection.has(comp.slug)
+              const iterKey = `component:${comp.slug}`
+              const verCount = iterations[iterKey]?.versions?.length || 0
+              return (
+                <button
+                  key={comp.slug}
+                  onClick={() => {
+                    if (compSelectMode) {
+                      setCompSelection((prev) => {
+                        const next = new Set(prev)
+                        if (next.has(comp.slug)) next.delete(comp.slug)
+                        else next.add(comp.slug)
+                        return next
+                      })
+                    } else {
+                      selectComponent(comp.slug)
+                    }
+                  }}
+                  className={`w-full flex items-center gap-[8px] px-[12px] py-[9px] rounded-[8px] text-left transition ${
+                    (compSelectMode ? isChecked : isSelected) ? 'bg-[#161616] text-white' : 'text-[#777] hover:text-[#CCC] hover:bg-[#0F0F0F]'
+                  }`}
+                >
+                  {compSelectMode && (
+                    <div className={`w-[14px] h-[14px] rounded-[3px] border shrink-0 flex items-center justify-center ${
+                      isChecked ? 'bg-white border-white' : 'border-[#333]'
+                    }`}>
+                      {isChecked && (
+                        <svg width="8" height="8" viewBox="0 0 10 10" fill="none">
+                          <path d="M2 5.5L4 7.5L8 3" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      )}
+                    </div>
+                  )}
+                  <span className="text-[14px] flex-1 truncate">{comp.name}</span>
+                  {verCount > 1 && <span className="text-[11px] text-[#333] shrink-0">{verCount}v</span>}
+                </button>
+              )
+            })}
+            {compSelectMode && compSelection.size > 0 && (
+              <button
+                onClick={() => {
+                  const slugs = [...compSelection]
+                  const names = slugs.map((s) => components.find((c) => c.slug === s)?.name || s)
+                  setExportModalBatch({ slugs, names })
+                  setExportModalOpen(true)
+                  const compPage = figmaPages.find((p) => p.name === 'Component export')
+                  if (compPage) setExportTargetPage(compPage.name)
+                }}
+                className="w-full mt-[6px] py-[8px] rounded-[8px] bg-[#1A1A1A] text-white text-[12px] hover:bg-[#222] transition flex items-center justify-center gap-[4px]"
+              >
+                Export Selected ({compSelection.size})
+              </button>
+            )}
 
-            {/* Research section */}
-            <div className="mt-[22px]">
-              <div className="text-[11px] text-[#3A3A3A] uppercase tracking-[0.08em] px-[4px] mb-[8px]">Research</div>
+            {/* Research */}
+            <div className="mt-[18px]">
+              <div className="text-[11px] text-[#333] px-[12px] mb-[4px]">Research</div>
               {[
                 { slug: 'competitive-comparison', name: 'Planning' },
                 { slug: 'competitive-ux', name: 'UX Audit' },
@@ -910,8 +915,8 @@ export default function DashboardShell({ screens, flows, components, iterations:
                   <button
                     key={slug}
                     onClick={() => selectScreen(slug)}
-                    className={`w-full text-left px-[12px] py-[10px] rounded-[10px] text-[14px] transition mb-[1px] ${
-                      isSelected ? 'bg-[#1A1A1A] text-white' : 'text-[#888] hover:text-white hover:bg-[#0D0D0D]'
+                    className={`w-full text-left px-[12px] py-[9px] rounded-[8px] text-[14px] transition ${
+                      isSelected ? 'bg-[#161616] text-white' : 'text-[#777] hover:text-[#CCC] hover:bg-[#0F0F0F]'
                     }`}
                   >
                     {name}
@@ -919,8 +924,9 @@ export default function DashboardShell({ screens, flows, components, iterations:
                 )
               })}
             </div>
-
             <div className="flex-1 min-h-[20px]" />
+              </>
+            )}
           </div>
 
           {/* Export at bottom */}
