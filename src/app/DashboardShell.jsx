@@ -727,11 +727,15 @@ export default function DashboardShell({ screens, flows, components, iterations:
           { key: 'sandbox', label: 'Sandbox' },
           { key: 'flows', label: 'Flows' },
           { key: 'components', label: 'Components' },
-        ].map(({ key, label }) => (
+          { key: 'ux-audit', label: 'UX Audit' },
+          { key: 'planning', label: 'Planning' },
+        ].map(({ key, label }, i, arr) => (
           <button
             key={key}
             onClick={() => setSidebarTab(key)}
             className={`px-[12px] h-[32px] rounded-[8px] text-[13px] transition ${
+              i === 3 ? 'ml-[8px]' : ''
+            } ${
               sidebarTab === key
                 ? 'text-white bg-[#1A1A1A]'
                 : 'text-[#4A4A4A] hover:text-[#888] hover:bg-[#0D0D0D]'
@@ -764,7 +768,18 @@ export default function DashboardShell({ screens, flows, components, iterations:
       {/* ── BODY ── */}
       <div className="flex flex-1 overflow-hidden">
 
+        {/* ── FULL-CANVAS VIEWS (no sidebar) ── */}
+        {(sidebarTab === 'ux-audit' || sidebarTab === 'planning') && (
+          <iframe
+            key={sidebarTab}
+            src={sidebarTab === 'ux-audit' ? '/screen/competitive-ux' : '/screen/competitive-comparison'}
+            className="flex-1 border-0"
+            tabIndex={-1}
+          />
+        )}
+
         {/* ── LEFT BROWSER PANEL ── */}
+        {(sidebarTab === 'sandbox' || sidebarTab === 'flows' || sidebarTab === 'components') && (<>
         <nav className="w-[250px] border-r border-[#141414] bg-[#070707] flex flex-col overflow-hidden shrink-0">
           <div className="flex-1 overflow-y-auto px-[8px] py-[8px] flex flex-col gap-[1px]">
 
@@ -1240,6 +1255,7 @@ export default function DashboardShell({ screens, flows, components, iterations:
             )}
           </div>
         </main>
+        </>)} {/* end sandbox/flows/components conditional */}
 
         {/* ── RIGHT SIDEBAR (Tools) ── */}
         {rightSidebarOpen && (
