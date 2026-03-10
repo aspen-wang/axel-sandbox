@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
+import Link from 'next/link'
 
 // ─────────────────────────────────────────────
 // CONSTANTS
@@ -1113,6 +1114,12 @@ export default function SocialCampaignPage() {
         padding: '13px 28px',
         display: 'flex', alignItems: 'center', gap: 14,
       }}>
+        <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 6, textDecoration: 'none', color: w(0.3), fontFamily: R_STR, fontSize: 12, fontWeight: 300, letterSpacing: '0.02em', flexShrink: 0 }}>
+          &#8592; Home
+        </Link>
+
+        <div style={{ width: 1, height: 16, background: w(0.08) }} />
+
         <div>
           <div style={{ fontFamily: R_STR, fontSize: 14, fontWeight: 400, color: w(0.72), letterSpacing: '0.01em' }}>Social Campaign</div>
           <div style={{ fontFamily: R_STR, fontSize: 11, fontWeight: 300, color: w(0.2), marginTop: 2 }}>{ADS.length} ads · 3 formats · {FORMATS.length} sizes</div>
