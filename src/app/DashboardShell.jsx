@@ -42,6 +42,17 @@ export default function DashboardShell({ screens, flows, components, iterations:
   const [collapsedFlows, setCollapsedFlows] = useState(() => Object.fromEntries(flows.map((f) => [f.slug, true])))
   const [researchCollapsed, setResearchCollapsed] = useState(false)
   const [sidebarTab, setSidebarTab] = useState('sandbox')
+  const [researchTab, setResearchTab] = useState('planning') // 'planning' | 'ux-audit'
+  const [flowDrillSlug, setFlowDrillSlug] = useState(null) // null = flow list, string = drilled into that flow
+
+  // Build screen → component names map (inverse of componentScreenMap)
+  const screenComponentsMap = Object.entries(componentScreenMap).reduce((acc, [compSlug, entries]) => {
+    entries.forEach(({ screenSlug }) => {
+      if (!acc[screenSlug]) acc[screenSlug] = []
+      acc[screenSlug].push(compSlug)
+    })
+    return acc
+  }, {})
   const [flowOverview, setFlowOverview] = useState(false)
   const [screenVersion, setScreenVersion] = useState(null) // null = main (A), or 'B', 'C', etc.
 
@@ -727,12 +738,16 @@ export default function DashboardShell({ screens, flows, components, iterations:
           { key: 'sandbox', label: 'Sandbox' },
           { key: 'flows', label: 'Flows' },
           { key: 'components', label: 'Components' },
-          { key: 'ux-audit', label: 'UX Audit' },
-          { key: 'planning', label: 'Planning' },
-        ].map(({ key, label }, i, arr) => (
+          { key: 'campaign', label: 'Campaign' },
+          { key: 'research', label: 'Research' },
+        ].map(({ key, label }, i) => (
           <button
             key={key}
-            onClick={() => setSidebarTab(key)}
+            onClick={() => {
+              setSidebarTab(key)
+              setFlowDrillSlug(null)
+              if (key === 'components') { setSelectedType('component'); setSelectedSlug(null) }
+            }}
             className={`px-[12px] h-[32px] rounded-[8px] text-[13px] transition ${
               i === 3 ? 'ml-[8px]' : ''
             } ${
@@ -769,13 +784,37 @@ export default function DashboardShell({ screens, flows, components, iterations:
       <div className="flex flex-1 overflow-hidden">
 
         {/* ── FULL-CANVAS VIEWS (no sidebar) ── */}
-        {(sidebarTab === 'ux-audit' || sidebarTab === 'planning') && (
+        {sidebarTab === 'campaign' && (
           <iframe
-            key={sidebarTab}
-            src={sidebarTab === 'ux-audit' ? '/screen/competitive-ux' : '/screen/competitive-comparison'}
+            key="campaign"
+            src="/social-campaign"
             className="flex-1 border-0"
             tabIndex={-1}
           />
+        )}
+
+        {sidebarTab === 'research' && (
+          <div className="flex-1 flex flex-col overflow-hidden">
+            <div className="h-[40px] flex items-center px-[16px] border-b border-[#141414] shrink-0 gap-[2px]">
+              {[{ key: 'planning', label: 'Planning' }, { key: 'ux-audit', label: 'UX Audit' }].map(({ key, label }) => (
+                <button
+                  key={key}
+                  onClick={() => setResearchTab(key)}
+                  className={`px-[12px] h-[28px] rounded-[6px] text-[12px] transition ${
+                    researchTab === key ? 'text-white bg-[#1A1A1A]' : 'text-[#4A4A4A] hover:text-[#888] hover:bg-[#0D0D0D]'
+                  }`}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+            <iframe
+              key={researchTab}
+              src={researchTab === 'planning' ? '/screen/competitive-comparison' : '/screen/competitive-ux'}
+              className="flex-1 border-0"
+              tabIndex={-1}
+            />
+          </div>
         )}
 
         {/* ── LEFT BROWSER PANEL ── */}
@@ -783,10 +822,9 @@ export default function DashboardShell({ screens, flows, components, iterations:
         <nav className="w-[250px] border-r border-[#141414] bg-[#070707] flex flex-col overflow-hidden shrink-0">
           <div className="flex-1 overflow-y-auto px-[8px] py-[8px] flex flex-col gap-[1px]">
 
-            {/* ── SANDBOX TAB (home = flows view) ── */}
-            {(sidebarTab === 'sandbox' || sidebarTab === 'flows') && (
+            {/* ── SANDBOX TAB — Walkthrough only ── */}
+            {sidebarTab === 'sandbox' && (
               <>
-            {/* Walkthrough — featured */}
             {(() => {
               const isSelected = selectedType === 'screen' && selectedSlug === 'walkthrough'
               return (
@@ -804,48 +842,84 @@ export default function DashboardShell({ screens, flows, components, iterations:
                 </button>
               )
             })()}
+            <div className="flex-1 min-h-[20px]" />
+              </>
+            )}
 
-            {/* Flows section */}
-            <div className="mt-[18px]">
-              <div className="text-[11px] text-[#333] px-[12px] mb-[4px]">Flows</div>
-              {visibleFlows.map((flow) => (
-                <div key={flow.slug}>
+            {/* ── FLOWS TAB — two-level drill-down only ── */}
+            {sidebarTab === 'flows' && (
+              <>
+            {/* Flows section — two-level drill-down */}
+            {flowDrillSlug === null ? (
+              /* Level 1: Flow category list */
+              <div className="mt-[18px] flex flex-col gap-[1px]">
+                <div className="text-[11px] text-[#333] px-[12px] mb-[4px]">Flows</div>
+                {visibleFlows.map((flow) => (
                   <button
-                    onClick={() => toggleFlow(flow.slug)}
-                    className="w-full flex items-center gap-[8px] px-[12px] py-[9px] rounded-[8px] hover:bg-[#0F0F0F] transition group"
+                    key={flow.slug}
+                    onClick={() => setFlowDrillSlug(flow.slug)}
+                    className="w-full flex items-center gap-[10px] px-[12px] py-[10px] rounded-[8px] hover:bg-[#0F0F0F] transition group text-left"
                   >
-                    <svg
-                      width="7" height="7" viewBox="0 0 10 10"
-                      className={`shrink-0 text-[#333] transition-transform ${collapsedFlows[flow.slug] ? '' : 'rotate-90'}`}
-                    >
+                    <div className="flex-1 min-w-0">
+                      <div className="text-[14px] text-[#888] group-hover:text-[#CCC] transition truncate">{flow.name}</div>
+                    </div>
+                    <span className="text-[11px] text-[#333] shrink-0">{flow.steps.length}</span>
+                    <svg width="6" height="6" viewBox="0 0 10 10" className="shrink-0 text-[#333] group-hover:text-[#555] transition">
                       <path d="M3 1.5l4 3.5-4 3.5" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
-                    <span className="text-[14px] text-[#777] flex-1 text-left group-hover:text-[#CCC] transition truncate">{flow.name}</span>
-                    <span className="text-[11px] text-[#333] shrink-0">{flow.steps.length}</span>
                   </button>
-                  {!collapsedFlows[flow.slug] && (
-                    <div className="pl-[12px] flex flex-col gap-[1px] mb-[2px]">
-                      {flow.steps.map((stepSlug) => {
-                        const screen = visibleScreens.find((s) => s.slug === stepSlug)
-                        if (!screen) return null
-                        const isSelected = selectedType === 'screen' && selectedSlug === stepSlug
-                        return (
-                          <button
-                            key={stepSlug}
-                            onClick={() => selectScreen(stepSlug)}
-                            className={`w-full text-left px-[12px] py-[7px] rounded-[7px] text-[13px] transition ${
-                              isSelected ? 'text-white bg-[#161616]' : 'text-[#555] hover:text-[#AAA] hover:bg-[#0F0F0F]'
-                            }`}
-                          >
+                ))}
+              </div>
+            ) : (
+              /* Level 2: Screens inside a flow */
+              (() => {
+                const drillFlow = flows.find((f) => f.slug === flowDrillSlug)
+                if (!drillFlow) return null
+                return (
+                  <div className="mt-[8px] flex flex-col gap-[1px]">
+                    <button
+                      onClick={() => setFlowDrillSlug(null)}
+                      className="flex items-center gap-[6px] px-[8px] py-[6px] rounded-[6px] text-[12px] text-[#444] hover:text-[#888] hover:bg-[#0F0F0F] transition mb-[4px]"
+                    >
+                      <svg width="6" height="6" viewBox="0 0 10 10" className="shrink-0">
+                        <path d="M7 1.5L3 5l4 3.5" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      Flows
+                    </button>
+                    <div className="text-[11px] text-[#333] px-[12px] mb-[4px]">{drillFlow.name}</div>
+                    {drillFlow.steps.map((stepSlug) => {
+                      const screen = visibleScreens.find((s) => s.slug === stepSlug)
+                      if (!screen) return null
+                      const isSelected = selectedType === 'screen' && selectedSlug === stepSlug
+                      const screenComps = screenComponentsMap?.[stepSlug] || []
+                      return (
+                        <button
+                          key={stepSlug}
+                          onClick={() => selectScreen(stepSlug)}
+                          className={`w-full text-left px-[12px] py-[9px] rounded-[8px] transition ${
+                            isSelected ? 'bg-[#161616]' : 'hover:bg-[#0F0F0F]'
+                          }`}
+                        >
+                          <div className={`text-[14px] truncate transition ${isSelected ? 'text-white' : 'text-[#777] hover:text-[#CCC]'}`}>
                             {screen.name}
-                          </button>
-                        )
-                      })}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
+                          </div>
+                          {screenComps.length > 0 && (
+                            <div className="flex flex-wrap gap-[4px] mt-[4px]">
+                              {screenComps.slice(0, 3).map((c) => (
+                                <span key={c} className="text-[10px] text-[#383838] bg-[#111] px-[5px] py-[1px] rounded-[4px]">{c}</span>
+                              ))}
+                              {screenComps.length > 3 && (
+                                <span className="text-[10px] text-[#383838]">+{screenComps.length - 3}</span>
+                              )}
+                            </div>
+                          )}
+                        </button>
+                      )
+                    })}
+                  </div>
+                )
+              })()
+            )}
             <div className="flex-1 min-h-[20px]" />
               </>
             )}
@@ -918,27 +992,6 @@ export default function DashboardShell({ screens, flows, components, iterations:
               </button>
             )}
 
-            {/* Research */}
-            <div className="mt-[18px]">
-              <div className="text-[11px] text-[#333] px-[12px] mb-[4px]">Research</div>
-              {[
-                { slug: 'competitive-comparison', name: 'Planning' },
-                { slug: 'competitive-ux', name: 'UX Audit' },
-              ].map(({ slug, name }) => {
-                const isSelected = selectedType === 'screen' && selectedSlug === slug
-                return (
-                  <button
-                    key={slug}
-                    onClick={() => selectScreen(slug)}
-                    className={`w-full text-left px-[12px] py-[9px] rounded-[8px] text-[14px] transition ${
-                      isSelected ? 'bg-[#161616] text-white' : 'text-[#777] hover:text-[#CCC] hover:bg-[#0F0F0F]'
-                    }`}
-                  >
-                    {name}
-                  </button>
-                )
-              })}
-            </div>
             <div className="flex-1 min-h-[20px]" />
               </>
             )}
@@ -1000,6 +1053,17 @@ export default function DashboardShell({ screens, flows, components, iterations:
           {/* Preview header */}
           {selectedSlug && (
             <div className="h-[48px] flex items-center px-[24px] border-b border-[#1A1A1A] shrink-0 gap-[10px]">
+              {selectedType === 'component' && (
+                <button
+                  onClick={() => setSelectedSlug(null)}
+                  className="flex items-center gap-[5px] text-[#444] hover:text-[#888] transition mr-[4px]"
+                >
+                  <svg width="6" height="6" viewBox="0 0 10 10" className="shrink-0">
+                    <path d="M7 1.5L3 5l4 3.5" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  <span className="text-[12px]">Library</span>
+                </button>
+              )}
               <span className="text-[15px] text-white truncate">{selectedName}</span>
               {selectedType === 'flow' && selectedMeta && (
                 <span className="text-[12px] text-[#555]">{selectedMeta.stepCount} screens</span>
@@ -1197,8 +1261,35 @@ export default function DashboardShell({ screens, flows, components, iterations:
                 <iframe key={previewUrl} src={previewUrl} className="border-0" scrolling="no"
                   style={{ width: PHONE_W, height: PHONE_H, overflow: 'hidden' }} tabIndex={-1} />
               </div>
+            ) : selectedType === 'component' && !selectedSlug ? (
+              /* Components library — all components overview */
+              <div className="w-full h-full overflow-auto">
+                <div className="p-[32px]">
+                  <div className="grid grid-cols-3 xl:grid-cols-4 gap-[12px]">
+                    {visibleComponents.map((comp) => (
+                      <button
+                        key={comp.slug}
+                        onClick={() => selectComponent(comp.slug)}
+                        className="flex flex-col bg-[#0D0D0D] border border-[#1A1A1A] rounded-[10px] overflow-hidden hover:border-[#2A2A2A] transition text-left"
+                      >
+                        <div className="w-full h-[140px] overflow-hidden bg-black">
+                          <iframe src={`/preview/component/${comp.slug}`} className="border-0 w-full h-full pointer-events-none" scrolling="no" tabIndex={-1} />
+                        </div>
+                        <div className="px-[12px] py-[8px] flex items-center justify-between">
+                          <span className="text-[13px] text-[#888] truncate">{comp.name}</span>
+                          {(() => {
+                            const iterKey = `component:${comp.slug}`
+                            const vCount = iterations[iterKey]?.versions?.length || 0
+                            return vCount > 1 ? <span className="text-[10px] text-[#444] shrink-0 ml-[4px]">{vCount}v</span> : null
+                          })()}
+                        </div>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
             ) : selectedType === 'component' ? (
-              /* Component variants grid */
+              /* Component detail — variants grid */
               <div className="w-full h-full overflow-auto">
                 <div className="p-[32px]">
                   <div className="grid grid-cols-2 xl:grid-cols-3 gap-[16px]">
